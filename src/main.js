@@ -3,23 +3,22 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 import { createApp } from 'vue';
 import App from './App.vue';
 import router from '@/router';
-import funcPlugins from './plugins/func';
-import objPlugins from './plugins/obj';
-import personPlugins from './plugins/person';
-import globalComponents from '@/plugins/global-components';
+// import globalComponents from '@/plugins/global-components';
 
 const app = createApp(App);
-  app.use(funcPlugins)
-  app.use(objPlugins)
-  app.use(personPlugins)
-  app.use(router)
-  app.use(globalComponents)
-  app.mount('#app');
-
+// app.use(globalComponents);
+app.use(funcPlugins)
+app.use(objPlugins)
+app.use(personPlugins)
+app.use(router);
+app.mount('#app');
 import 'bootstrap/dist/js/bootstrap.js';
+import funcPlugins from '@/plugins/func.js'
+import objPlugins from '@/plugins/obj.js'
+import personPlugins from '@/plugins/person.js'
 
-console.log('MODE: ', import.meta.env.MODE);
-console.log('BASE_URL: ', import.meta.env.BASE_URL);
-console.log('PROD: ', import.meta.env.PROD);
-console.log('DEV: ', import.meta.env.DEV);
-console.log('VITE_APP_API_URL: ', import.meta.env.VITE_APP_API_URL);
+// console.log('MODE: ', import.meta.env.MODE);
+// console.log('BASE_URL: ', import.meta.env.BASE_URL);
+// console.log('PROD: ', import.meta.env.PROD);
+// console.log('DEV: ', import.meta.env.DEV);
+// console.log('VITE_APP_API_URL: ', import.meta.env.VITE_APP_API_URL);

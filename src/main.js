@@ -6,12 +6,14 @@ import router from '@/router';
 import funcPlugins from './plugins/func';
 import objPlugins from './plugins/obj';
 import personPlugins from './plugins/person';
+import globalComponents from '@/plugins/global-components';
 
 const app = createApp(App);
   app.use(funcPlugins)
   app.use(objPlugins)
   app.use(personPlugins)
   app.use(router)
+  app.use(globalComponents)
   app.mount('#app');
 
 import 'bootstrap/dist/js/bootstrap.js';
